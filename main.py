@@ -1,6 +1,7 @@
 import os
 import numpy as np
 from PIL import Image
+import torch
 
 def load_images_from_directory(directory):
     """
@@ -15,6 +16,7 @@ def load_images_from_directory(directory):
     """
     images = []
     labels = []
+    
     
     for filename in os.listdir(directory):
         if filename.endswith(".png"):
